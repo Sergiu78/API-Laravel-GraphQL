@@ -14,8 +14,10 @@ class TicketFactory extends Factory
     public function definition()
     {
         $event = \App\Models\Event::factory()->create();
+        $user = \App\Models\User::factory()->create();
         return [
             'event_id' => $event->id,
+            'user_id' => $user->id,
         ];
     }
 }
