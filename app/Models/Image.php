@@ -11,7 +11,7 @@ class Image extends Model
 {
     use HasFactory;
 
-    protected function getPathOfImage($filename, $user_id = null)
+    protected static function getPathOfImage($filename = null, $user_id = null)
     {
         $patch = null;
         if(null != $user_id) {
